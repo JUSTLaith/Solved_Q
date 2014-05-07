@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <iomanip>
+#include <algorithm>
+#include <cctype>
+using namespace std;
+
+int main()
+{
+	int T,N,X,Y,A;
+	
+	cin>>T;
+	for(int i=1;i<=T;i++)
+	{
+		cin>>N>>X>>Y;
+		vector<int>P(N);
+		
+		for(int j=0;j<N;j++)
+			cin>>P[j];
+		
+		if(P[0]==X && P[P.size()-1]==Y)
+			cout<<"BOTH"<<endl;
+		
+		else if(P[0]==X && P[P.size()-1]!=Y)
+			cout<<"EASY"<<endl;
+		
+		else if(P[0]!=X && P[P.size()-1]==Y)
+			cout<<"HARD"<<endl;
+		
+		else if(P[0]!=X && P[P.size()-1]!=Y)
+			cout<<"OKAY"<<endl;
+	}
+    return 0;
+}
+
