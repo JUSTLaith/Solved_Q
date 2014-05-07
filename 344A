@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+
+using namespace std;
+
+int main()
+{
+	int num,b=0;
+	string s;
+	cin>>num;
+	num--;
+	cin>>s;
+	string A=s;
+	while(num--)
+	{
+		cin>>s;
+		if(A!=s)
+			b++;
+		A=s;
+	}
+	cout<<b+1<<endl;
+    return 0;
+}
