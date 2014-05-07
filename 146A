@@ -1,0 +1,38 @@
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+int main()
+{
+	int num,S1=0,S2=0,N=0;
+	bool TEST=true;
+	cin>>num;
+	vector<char>A(num);
+
+	for(int i=0;i<num;i++)
+	{
+		if(TEST)
+		{
+			cin>>A[i];
+			if(A[i]=='4' || A[i]=='7') N+=(A[i]-'0');
+			else
+			{
+				cout<<"NO"<<endl;
+				TEST=false;
+			}
+		}
+	}
+	if(TEST)
+	{
+		for(int i=0; i<num/2 ;i++) if(A[i]=='4' || A[i]=='7') S1+=(A[i]-'0');
+
+		for(int i=num/2;i<num;i++) if(A[i]=='4' || A[i]=='7') S2+=(A[i]-'0');
+
+
+		if(S1==S2 && S1+S2==N)
+			cout<<"YES"<<endl;
+		else
+			cout<<"NO"<<endl;
+	}
+	return 0;
+}
