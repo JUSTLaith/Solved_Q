@@ -1,0 +1,15 @@
+#include<iostream>
+#include<string>
+#include<cctype>
+using namespace std;
+int main(){
+	string str;
+	cin>>str;
+	for(int i=0 ;i<str.length();i++)
+	{
+		if(str[i]!='A' && str[i]!='a' && str[i]!='E'  && str[i]!='e'  && str[i]!='i'  && str[i]!='I'  && str[i]!='O'  &&
+			str[i]!='o'  &&  str[i]!='U'  && str[i]!='u'  && str[i]!='Y'  && str[i]!='y')
+			cout<<"."<<(char)tolower(str[i]);
+	}
+	return 0;
+}
