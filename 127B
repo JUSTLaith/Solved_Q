@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+
+using namespace std;
+
+int main()
+{
+	int n,m=0,A;
+	cin>>n;
+	vector<int>B(n,0);
+	for(int i=0;i<n;i++)
+	{
+		cin>>A;
+		B[A]++;
+	}
+	for(int i=1;i<B.size();i++)
+	{
+		m+=B[i]/2;
+	}
+	cout<<m/2<<endl;
+
+    return 0;
+}
