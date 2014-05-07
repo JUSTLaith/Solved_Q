@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <iomanip>
+#include <algorithm>
+#include <cctype>
+using namespace std;
+
+int main()
+{
+	int t,Js,up,dn;
+	cin>>t;
+	for(int i=1;i<=t;i++)
+	{
+		cin>>Js;
+		up=0;dn=0;
+		vector<int>J(Js);
+		cin>>J[0];
+		if(Js>1)
+		{for(int j=1;j<Js;j++)
+		{
+			cin>>J[j];
+			if(J[j]>J[j-1])
+				up++;
+			else if(J[j]<J[j-1])
+				dn++;
+		}
+		cout<<"Case "<<i<<": "<<up<<" "<<dn<<endl;
+		}
+		else
+			cout<<"Case "<<i<<": "<<0<<" "<<0<<endl;
+
+
+
+	}
+
+	return 0;
+}
