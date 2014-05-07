@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <iomanip>
+#include <algorithm>
+#include <cctype>
+using namespace std;
+
+int main()
+{
+	
+	int t,x,n,y,m;
+	cin>>t;
+	
+	for(int i=1;i<=t;i++)
+	{
+		cin>>n>>m;
+		x=(n/3);y=(m/3);
+		cout<<x*y<<endl;
+	}
+
+	return 0;
+}
