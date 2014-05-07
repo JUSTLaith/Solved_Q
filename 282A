@@ -1,0 +1,19 @@
+#include<iostream>
+#include<string>
+#include<cctype>
+using namespace std;
+int main(){
+	string A;
+	int test,Sum=0;cin>>test;
+	for(int i=1;i<=test;i++)
+	{
+		cin>>A;
+		if(A=="X++" || A=="++X" || A=="x++" || A=="++x" || A=="+X+" || A=="+x+" )
+			Sum++;
+		else if(A=="X--" || A=="--X" || A=="x--" || A=="--x" || A=="-X-" || A=="-x-" )
+			Sum--;
+
+	}
+	cout<<Sum<<endl;
+	return 0;
+}
