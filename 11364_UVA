@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+   int T,n,x[100];
+   int min ;
+   int max ;
+   cin >> T;
+      for(int i=0;i<T;i++)
+      {
+      min =100000;
+      max = -1;   
+		  cin >> n;
+		  
+		  for(int j=0;j<n;j++)
+			  cin >> x[j];
+          for(int k =0;k<n;k++)
+          {
+          if(x[k] < min)
+            min = x[k];
+          if(x[k] > max)
+            max = x[k];
+          }
+
+		  if(n>1)
+			 cout << (max-min)*2 << endl;
+		  if(n == 1)
+			 cout << "0" << endl;
+         
+	  }
+   return 0;
+}
