@@ -1,0 +1,18 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main(){
+	int num , P=0,V=0,T=0,S=0,F=0;
+	cin>>num;
+	for(int i=1;i<=num;i++)
+	{
+		S=0;
+		cin>>P>>V>>T;
+		S+=P+=V+=T;
+		if(S>=2)
+			F++;
+	}
+	cout<<F<<endl;
+
+	return 0;
+}
