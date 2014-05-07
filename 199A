@@ -1,0 +1,40 @@
+#include<iostream>
+#include<string>
+#include<cctype>
+#include<vector>
+using namespace std;
+
+void fun(unsigned n1,unsigned n2,unsigned n3 , unsigned &D)
+{
+	D++;
+	cout<<n1<<" "<<n2<<" "<<n3<<endl;
+}
+int main()
+{
+	unsigned num;
+	unsigned C=0;
+	cin>>num;
+	vector<unsigned>FIB;
+	for(unsigned i=0;i<num;i++)
+	{
+		if(i<2)
+			FIB.push_back(i);
+		else
+		{
+			FIB.push_back(FIB[i-1]+FIB[i-2]);
+			if(FIB[i]==num)
+			i=num-1;
+		}
+	}
+	for(unsigned i=1;i<FIB.size();i++)
+		for(unsigned j=i;j<FIB.size();j++)
+			for(unsigned k=i+1;k<FIB.size();k++)
+				if(FIB[i]+FIB[j]+FIB[k]==num)
+				{
+					fun(FIB[i],FIB[j],FIB[k],C);
+					i=FIB.size()-1;j=FIB.size()-1;k=FIB.size()-1;
+				}
+				if(C==0)
+					cout<<"I'm too stupid to solve this problem"<<endl;
+	return 0;
+}
