@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	int n,m,A=0;
+	cin>>n>>m;
+	for(int a=0; a*a<=n && a<=m ; a++)
+	{
+		int b= n-a*a;
+		if( b*b+a == m )
+			A++;
+	}
+	cout<<A<<endl;
+
+    return 0;
+}
