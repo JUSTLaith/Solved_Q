@@ -1,0 +1,39 @@
+#include<iostream>
+#include<string>
+#include<vector>
+#include<iomanip>
+#include<cctype>
+#include<sstream>
+using namespace std;
+int main ()
+{
+	double H,U,D,F;
+	while((cin>>H>>U>>D>>F)&&H!=0)
+	{
+		F=U*F/100;
+		double S=0,d=0;
+		while(true)
+		{
+			d++;
+			if (U>0)S+=U;
+			
+			U-=F;
+			
+			if(S>H) break;
+			S-=D;
+			if(S<0)  break;
+			
+			
+		}
+
+		if(S>=0)
+			cout<<"success on day "<<d<<endl;
+		else
+			cout<<"failure on day "<<d<<endl;
+
+		cin>>H>>U>>D>>F;
+	}
+
+
+	return 0;
+}
