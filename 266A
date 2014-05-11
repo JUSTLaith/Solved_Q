@@ -1,0 +1,21 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+int main()
+{
+	int num,cnt=0;
+	char C;
+	cin>>num;
+	vector <char> A (num);
+	for(int i=0;i<num;i++)
+		cin>>A[i];
+	for(int i=1;i<num;i++)
+	{
+		if(A[i-1]==A[i])
+			cnt++;
+	}
+	cout<<cnt<<endl;
+	return 0;
+}
