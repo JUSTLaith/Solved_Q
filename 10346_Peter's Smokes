@@ -1,0 +1,20 @@
+#include<iostream>
+#include<string>
+#include<vector>
+
+using namespace std;
+int main()
+{
+	int n,k,s;
+	while(cin>>n>>k)
+	{
+		s=n;
+		while(n>=k)
+		{
+			s+=(n/k);
+			n=(n/k)+(n%k);
+		}
+		cout<<s<<endl;
+	}
+	return 0;
+}
