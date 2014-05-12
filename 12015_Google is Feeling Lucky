@@ -1,0 +1,33 @@
+#include<iostream>
+#include<string>
+#include<vector>
+
+using namespace std;
+int main()
+{
+	int T,V,max;
+	string A;
+
+	vector<string>S(10);
+	vector<int>Av(10);
+
+	cin>>T;
+	for(int m=1;m<=T;m++)
+	{
+		for(int i=0;i<10;i++)
+			cin>>S[i]>>Av[i];
+		
+		max=Av[0];
+		
+		for(int i=1;i<10;i++)
+			if(max<=Av[i])
+				max=Av[i];
+		
+		cout<<"Case #"<<m<<":"<<endl;
+		
+		for(int i=0;i<10;i++)
+			if(Av[i]>=max)
+				cout<<S[i]<<endl;
+	}
+	return 0;
+}
