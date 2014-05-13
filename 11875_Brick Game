@@ -1,0 +1,28 @@
+#include<string>
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+	int t,te,p;
+	cin>>t;
+	for(int i=1;i<=t;i++)
+	{
+		vector<int>P;
+		cin>>te;
+		if(te>1 && te<11)
+		{
+			int temp=te;
+			while(temp--)
+			{
+				cin>>p;
+				if(p>=11 && p<=20)
+					P.push_back(p);
+			}
+			cout<<"Case "<<i<<": "<<P[(te/2)]<<endl;
+		}
+		P.clear();
+	}
+
+	return 0;
+}
