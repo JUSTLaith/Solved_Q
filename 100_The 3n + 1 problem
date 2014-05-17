@@ -1,0 +1,33 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <vector>
+#include <algorithm>
+using namespace std;
+int main() 
+{
+	int a,b,count,n,max,m,l;
+	while(cin>>a>>b)
+	{
+		if(a>b)
+		{m=a;l=b;}
+		else
+		{m=b;l=a;}
+
+		max = 0;
+		for(int i=l;i<=m;i++)
+		{
+			n=i;count=1;
+			while(true)
+			{
+				if(n==1)break;
+				if(n%2==0)n=n/2;
+				else if(n%2!=0)n=(3*n)+1;
+				count++;				
+			}
+			if(count>max)max=count;	
+		}
+		cout<<a<<" "<<b<<" "<<max<<endl;
+	}
+	return 0;
+}
