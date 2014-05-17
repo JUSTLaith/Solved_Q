@@ -1,0 +1,22 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+	double n,temp,m,s=0;
+	cin>>n;
+	temp=n ;
+	while(temp--)
+	{
+		cin>>m;
+		s+=m;
+	}
+	cout<<fixed<<setprecision(12)<<s/n<<endl;
+
+	
+	return 0;
+}
