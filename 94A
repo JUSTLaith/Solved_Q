@@ -1,0 +1,37 @@
+#include<iostream>
+#include<string>
+#include<cctype>
+#include<queue>
+#include<cmath>
+#include<algorithm>
+#include<utility>
+#include<map>
+#include<set>
+using namespace std;
+int main ()
+{
+	string As[8]={""},B,A[10];
+	int count=0;
+	cin>>B;
+	for(int i=0;i<10;i++)
+		cin>>A[i];
+
+	As[0]=B.substr(0,10);
+	As[1]=B.substr(10,10);
+	As[2]=B.substr(20,10);
+	As[3]=B.substr(30,10);
+	As[4]=B.substr(40,10);
+	As[5]=B.substr(50,10);
+	As[6]=B.substr(60,10);
+	As[7]=B.substr(70,10);
+
+	for(int i=0;i<8;i++)
+	{
+		for(int j=0;j<10;j++)
+		{
+			if(As[i]==A[j])
+				cout<<j;
+		}
+	}
+	return 0;
+}
