@@ -1,0 +1,22 @@
+#include<iostream>
+#include<cstring>
+#include<cctype>
+#include<queue>
+#include<cmath>
+#include<algorithm>
+#include<utility>
+#include<map>
+#include<vector>
+#include<set>
+using namespace std;
+int main ()
+{
+	string str;
+	cin>>str;
+
+	if(str.find("H")!=string::npos || str.find("9")!=string::npos || str.find("Q")!=string::npos)
+		cout<<"YES"<<endl;
+	else
+		cout<<"NO"<<endl;
+	return 0;
+}
