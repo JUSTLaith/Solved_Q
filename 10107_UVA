@@ -1,0 +1,28 @@
+#include<iostream>
+#include<cstring>
+#include<cctype>
+#include<queue>
+#include<cmath>
+#include<algorithm>
+#include<utility>
+#include<map>
+#include<vector>
+#include<set>
+using namespace std;
+int main ()
+{
+	int num;
+	vector<int>N;
+	while(cin>>num)
+	{
+		N.push_back(num);
+		
+		sort(N.begin(),N.end());
+		if(N.size()%2!=0)
+			cout<<N[N.size()/2]<<endl;
+		else
+			cout<<((N[N.size()/2-1]+N[N.size()/2])/2)<<endl;
+
+	}
+	return 0;
+}
