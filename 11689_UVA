@@ -1,0 +1,33 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <cctype>
+#include <cstdio>
+#define ll long long
+#define sc scanf
+#define pf printf
+#define Ct cout
+#define ct cin
+#define Pi 2*acos(0.0)
+using namespace std;
+
+int main() 
+{
+	int t,e,f,c;
+	cin>>t;
+	while(t--)
+	{
+		cin>>e>>f>>c;
+		e+=f;
+		f=e/c;
+		while(e>=c)
+		{
+			e=e/c+e%c;
+			f+=e/c;
+		}
+		cout<<f<<endl;
+	}
+	return 0;
+}
