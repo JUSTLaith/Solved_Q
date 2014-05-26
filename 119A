@@ -1,0 +1,46 @@
+#include<iostream>
+#include<string>
+#include<cctype>
+#include<queue>
+#include<cmath>
+#include<algorithm>
+#include<utility>
+#include<map>
+#include<vector>
+#include<set>
+#include<iomanip>
+using namespace std;
+////// To Find The Greatest Common Divisor ///////
+int gcd ( int a , int b )
+{
+	if ( !b )
+		return a;
+	return gcd ( b , a % b );
+}
+/////////////////////////////////////////////////
+int main ()
+{
+	int a,b,x,ca=0,cb=0,k;
+	cin>>a>>b>>x;
+	while(x>0)
+	{
+		if(x>0)
+		{
+			ca+=gcd(a,x);
+			k=1;
+		}
+		x=x-gcd(a,x);
+		if(x>0)
+		{
+			cb+=gcd(b,x);
+			k=0;
+		}
+		x=x-gcd(b,x);
+	}
+	(k)?cout<<"0"<<endl:cout<<"1"<<endl;
+
+
+
+
+	return 0;
+}
