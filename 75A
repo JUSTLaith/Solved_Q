@@ -1,0 +1,58 @@
+#include<iostream>
+#include<string>
+#include<cctype>
+#include<queue>
+#include<cmath>
+#include<algorithm>
+#include<utility>
+#include<map>
+#include<vector>
+#include<set>
+#include<iomanip>
+using namespace std;
+////// To Find The Greatest Common Divisor ///////
+int gcd ( int a , int b ) /**/ {if ( !b )return a;return gcd ( b , a % b );}
+int main ()
+{
+	long long x1,x2=0,y1,y2=0,s1=0,s2=0;
+	while(cin>>x1>>y1)
+	{
+		x2=0;y2=0;s2=0;
+		s1=x1+y1;
+		while(x1>0)
+		{
+			
+			if(x1%10!=0){x2*=10;x2+=x1%10;}
+			x1/=10;
+		}
+		x1=x2;
+		x2=0;
+		while(x1>0)
+		{x2*=10;x2+=x1%10;x1/=10;}
+		while(y1>0)
+		{
+			
+			if(y1%10!=0){y2*=10;y2+=y1%10;}
+			y1/=10;
+		}
+		y1=y2;
+		y2=0;
+		while(y1>0)
+		{y2*=10;y2+=y1%10;y1/=10;}
+		while(s1>0)
+		{
+			
+			if(s1%10!=0){s2*=10;s2+=s1%10;}
+			s1/=10;
+		}
+		s1=s2;
+		s2=0;
+		while(s1>0)
+		{s2*=10;s2+=s1%10;s1/=10;}
+		if(x2+y2==s2)
+			cout<<"YES"<<endl;
+		else
+			cout<<"NO"<<endl;
+	}
+	return 0;
+}
