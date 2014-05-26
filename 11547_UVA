@@ -1,0 +1,37 @@
+#include<iostream>
+#include<string>
+#include<cctype>
+#include<queue>
+#include<cmath>
+#include<algorithm>
+#include<utility>
+#include<map>
+#include<vector>
+#include<set>
+#include<iomanip>
+
+using namespace std;
+int main ()
+{
+	long long t,n;
+	cin>>t;
+	while(t--)
+	{
+		cin>>n;
+		n*=567;
+		n/=9;
+		// then add 7492, then multiply by 235, then divide by 47, then subtract 498. 
+		n+=7492;
+		n*=235;
+		n/=47;
+		n-=498;
+		if(n<0)
+			n=-n;
+
+		n/=10;	
+		cout<<n%10<<endl;
+
+
+	}
+	return 0;
+}
