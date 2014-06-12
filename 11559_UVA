@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <algorithm>
+#include <cmath>
+#include <vector>
+#include <map>
+using namespace std;
+int main ()
+{
+	int n,b,h,w,p,a;
+	vector<int>qw;
+	
+	while (cin>>n>>b>>h>>w)
+	{
+		bool z=true;
+		qw.clear();
+		for(int i=0;i<h;i++)
+		{
+			cin>>p;
+
+			for(int j=0;j<w;j++)
+			{
+				cin>>a;
+				if(a>=n && b>=p*n)
+				{
+					qw.push_back(p*n);z=false;
+				}
+			}
+		} 
+		if(z)
+			cout<<"stay home"<<endl;
+		else
+		{
+			sort(qw.begin(),qw.end());
+			cout<<qw[0]<<endl;
+		}
+	}
+	return 0;
+}
