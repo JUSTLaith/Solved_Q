@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+#include <cstdio>
+#include <iomanip>
+#include <algorithm>
+#include <cmath>
+#include <queue>
+#include <vector>
+#include <map>
+#include <set>
+#include <sstream>
+#include <array>
+
+#define pi 3.141592653589793
+#define pb(x) push_back(x)
+#define vi vector<int>
+#define vs vector<string>
+/* Laith Mohammad */
+using namespace std;
+
+void print(int &i){cout<<i<<" ";}
+bool even(int i){return i%2==0;} bool odd (int i){return i%2!=0;}
+int main ()
+{
+	int n;
+	string str;
+	cin>>n;
+	while(n--)
+	{
+		cin>>str;
+		if(str=="1" || str=="4" || str=="78")
+		{cout<<"+"<<endl;continue;}
+		if(str[str.length()-1]=='5' && str[str.length()-2]=='3')
+		{cout<<"-"<<endl;continue;}
+		if(str[str.length()-1]=='4' && str[0]=='9')
+		{cout<<"*"<<endl;continue;}
+		if(str[0]=='1' && str[1]=='9' && str[2]=='0' )
+		{cout<<"?"<<endl;continue;}
+	}
+	return 0;
+}
